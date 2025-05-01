@@ -23,7 +23,7 @@ test('NFLD ID Validation', async ({ page }) =>
 	await page.locator('#ctl00_MPFormContent_IFRAMEShim').contentFrame().getByRole('button', { name: 'Toggle calendar' }).click();
 	await page.locator('#ctl00_MPFormContent_IFRAMEShim').contentFrame().getByRole('button', { name: 'Today' }).click();
 	await page.locator('#ctl00_MPFormContent_IFRAMEShim').contentFrame().locator('#control137').getByText('Check Errors').click();
-	await expect(page.locator('#ctl00_MPFormContent_IFRAMEShim').contentFrame().getByText('A12a. Admitted From This field is required')).toBeVisible();
+	await expect(page.locator('#ctl00_MPFormContent_IFRAMEShim').contentFrame().getByText('A12a. Admitted From this field is required')).toBeVisible();
 	await page.locator('#ctl00_MPFormContent_IFRAMEShim').contentFrame().getByRole('button', { name: 'OK', exact: true }).click();
 	await page.getByRole('button', { name: 'Return' }).click();
 	await page.getByRole('button', { name: 'Delete' }).click();
